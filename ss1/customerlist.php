@@ -21,7 +21,7 @@
 <body>
 <table border="0">
     <tr>
-        <th>STT</th>
+        <th>STT </th>
         <th>Tên</th>
         <th>Ngày sinh</th>
         <th>Địa chỉ</th>
