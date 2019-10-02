@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST'){
     if ($username == "admin" && $password == "admin"){
         echo "Welcome $username";
     }else{
-        echo "Try again!";
+        echo "Try again! ";
     }
 }
 
