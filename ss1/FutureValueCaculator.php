@@ -11,7 +11,7 @@
 <form method="post" action="futureValueCaculator.php">
     <table>
         <tr>
-            <td>Investment Amount: </td>
+            <td>Investment Amount:  </td>
             <td><input type="text" name="investmentAmount"></td>
         </tr>
         <tr>
