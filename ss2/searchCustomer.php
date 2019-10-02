@@ -65,11 +65,6 @@ $filtered_customers = searchByDate($customer_list, $from_date, $to_date);
         <td>Địa chỉ</td>
         <td>Ảnh</td>
     </tr>
-    <!--    --><?php //if (count($filtered_customers) === 0): ?>
-    <!--        <tr>-->
-    <!--            <td colspan="5" class="message">Không tìm thấy khách hàng nào</td>-->
-    <!--        </tr>-->
-    <!--    --><?php //endif; ?>
 
     <?php foreach ($filtered_customers as $index => $customer): ?>
         <tr>
