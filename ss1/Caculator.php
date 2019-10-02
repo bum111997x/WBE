@@ -17,7 +17,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $discountPrice = $listPrice - $discountAmount;
     echo "Product Description: $productDescription";
     echo "<br>";
-    echo "List Price: $listPrice";
+    echo "List Price:  $listPrice";
     echo "<br>";
     echo "Discount Percent: $discountPercent";
     echo "<br>";
