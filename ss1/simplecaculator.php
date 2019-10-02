@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] = "POST") {
 
     }
 
-    echo "Ket qua la: $result";
+    echo "Ket qua la:  $result";
 }
 
 
