@@ -11,7 +11,7 @@
 <form method="post" action="Caculator.php">
     <table>
         <tr>
-            <td>Product Description:</td>
+            <td>Product Description: </td>
             <td><input type="text" name="ProductDescription"></td>
         </tr>
         <tr>
