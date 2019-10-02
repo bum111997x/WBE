@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         $numUnit = $num - ($numhundreds * 100) - ($numtenth * 10);
         foreach ($array1 as $keyUnit => $unit) {
             if ($numhundreds == $keyUnit) {
-                echo $unit . " hunderd and ";
+                echo $unit . " hunderd and  ";
             }
         }
         foreach ($array2 as $keyTenth => $tenth) {
