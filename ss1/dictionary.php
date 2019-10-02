@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] = "POST"){
     }
 
     if ($flag == 0 ){
-        echo "Khong tim thay tu can tra!";
+        echo "Khong tim thay tu can tra! ";
     }
 }
 
