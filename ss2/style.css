@@ -2,11 +2,13 @@ table {
     border-collapse: collapse;
     width: 100%;
 }
+
 th, td {
-    padding: 8px;
+    padding: 7px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
+
 #from, #to {
     width: 200px;
     border: 2px solid #ccc;
@@ -14,19 +16,23 @@ th, td {
     font-size: 16px;
     padding: 12px 10px 12px 10px;
 }
+
 #submit {
     border-radius: 2px;
     padding: 10px 32px;
     font-size: 16px;
 }
-.profile{
+
+.profile {
     height: 60px;
     width: 80px;
     overflow: hidden;
 }
-.profile img{
+
+.profile img {
     width: 100%;
 }
-.message{
+
+.message {
     text-align: center;
 }
