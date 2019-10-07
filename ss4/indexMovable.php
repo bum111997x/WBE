@@ -1,7 +1,7 @@
 <?php
 
 include_once "point.php";
-include_once "movablePointgit.php";
+include_once "movablePoint.php";
 
 $movablePoint = new MovablePoint(3, 4, 2, 2);
 $movablePoint->toString();
