@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 </head>
 <body>
 <form method="post">
-    <input type="text" placeholder="YYYY-MM-DD" name="date">
+    <input type="date" placeholder="YYYY-MM-DD" name="date">
     <input type="submit" value="submit">
 </form>
 </body>
