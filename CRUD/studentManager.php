@@ -35,6 +35,27 @@ class StudentManager
         $newData = json_encode($currentData);
         file_put_contents($this->path, $newData);
     }
+
+    public function getListStudent()
+    {
+        $data = $this->readFileJson();
+        $studentList = [];
+        foreach ($data as $item){
+            $student = new Student($item["name"],$item["phone"],$item["address"],$item["role"],$item["group"]);
+            array_push($studentList,$student);
+        }
+        return $studentList;
+    }
+
+    public function deleteStudent($index){
+        $students =$this->getListStudent();
+        if(array_key_exists($index,$students)){
+            array_splice($students,$index,1);
+            $newData = json_encode($students);
+            file_put_contents($this->path,$newData);
+        }
+    }
+
 }
 
 ?>

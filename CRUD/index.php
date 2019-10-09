@@ -1,3 +1,28 @@
+<?php
+include_once "user.php";
+include_once "student.php";
+include_once "studentManager.php";
+
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $name = $_POST['name'];
+    $phone = $_POST['phone'];
+    $address = $_POST['address'];
+    $group = $_POST['group'];
+    $role = $_POST['role'];
+
+    $student = new Student($name, $phone, $address, $role, $group);
+    $studentManager = new StudentManager('data.json');
+    $studentManager->add($student);
+
+
+}
+
+$studentList = new StudentManager('data.json');
+$list = $studentList->getListStudent();
+
+?>
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -42,27 +67,39 @@
         </table>
     </center>
 </form>
+<br>
+<table id="customers">
+    <tr>
+        <td style="text-align: center" colspan="7"><h2>Danh sach sinh vien</h2></td>
+    </tr>
+    <tr>
+        <td>STT</td>
+        <td>Name</td>
+        <td>Phone</td>
+        <td>Address</td>
+        <td>Role</td>
+        <td>Group</td>
+        <td></td>
+    </tr>
+    <?php
+    foreach ($list as $key => $item) {
+        ?>
+        <tr>
+            <td><?php echo $key + 1 ?></td>
+            <td><?php echo $item->name ?></td>
+            <td><?php echo $item->phone ?></td>
+            <td><?php echo $item->address ?></td>
+            <td><?php echo $item->role ?></td>
+            <td><?php echo $item->group ?></td>
+            <td><a href="delete.php?id=<?php echo $key ?>" onclick="return confirm('Are you sure??????')">Delete</a>
+            </td>
+            <td><a href="edit.php?id=<?php echo $key ?>" onclick="return confirm('Are you sure??????')">Edit</a>
+            </td>
+        </tr>
+        <?php
+    }
+    ?>
+</table>
 </body>
 </html>
 
-
-<?php
-include_once "user.php";
-include_once "student.php";
-include_once "studentManager.php";
-
-if ($_SERVER['REQUEST_METHOD'] == "POST") {
-    $name = $_POST['name'];
-    $phone = $_POST['phone'];
-    $address = $_POST['address'];
-    $group = $_POST['group'];
-    $role = $_POST['role'];
-
-    $student = new Student($name, $phone, $address, $role, $group);
-    $studentManager = new StudentManager('data.json');
-    $studentManager->add($student);
-}
-
-include_once "list.php";
-
-?>
