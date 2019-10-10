@@ -31,28 +31,42 @@ $list = $studentList->getListStudent();
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        table#customers {
+            border-collapse: collapse;
+            width: 100%;
+            border: 2px;
+            color: #CD214F;
+            border-color: #212738;
+        }
+        #customers td{
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #212738;
+            font-size: 20px;
+        }
+    </style>
 </head>
-<body>
+<body background="image/luffy1.jpg" style="background-size: cover">
 <form action="" method="post">
     <center>
         <table>
             <tr><h1>Quan ly sinh vien</h1></tr>
             <tr>
                 <td>Name:</td>
-                <td><input type="text" name="name"></td>
+                <td><input type="text" name="name" style="border-radius: 10px"></td>
             </tr>
             <tr>
                 <td>Phone:</td>
-                <td><input type="text" name="phone"></td>
+                <td><input type="text" name="phone" style="border-radius: 10px"></td>
             </tr>
             <tr>
                 <td>Address:</td>
-                <td><input type="text" name="address"></td>
+                <td><input type="text" name="address" style="border-radius: 10px"></td>
             </tr>
             <tr>
                 <td>Group:</td>
-                <td><input type="text" name="group"></td>
+                <td><input type="text" name="group" style="border-radius: 10px"></td>
             </tr>
             <tr>
                 <td>Role:</td>
@@ -62,13 +76,13 @@ $list = $studentList->getListStudent();
                     </select></td>
             </tr>
             <tr>
-                <td colspan="2"><input type="submit" value="submit"></td>
+                <td colspan="2"><input class="btn " type="submit" value="submit"></td>
             </tr>
         </table>
     </center>
 </form>
 <br>
-<table id="customers">
+<table id="customers" border="1px">
     <tr>
         <td style="text-align: center" colspan="8"><h2>Danh sach sinh vien</h2></td>
     </tr>
