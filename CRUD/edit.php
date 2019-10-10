@@ -1,3 +1,20 @@
+<?php
+
+include_once "user.php";
+include_once "student.php";
+include_once "studentManager.php";
+$index = $_GET['id'];
+
+$manger = new StudentManager("data.json");
+$arr = $manger->getStudentByIndex($index);
+
+$name = $arr->name;
+$phone = $arr->phone;
+$address = $arr->address;
+$group = $arr->group;
+$role = $arr->role;
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,19 +26,7 @@
 </head>
 <body background="image/luffy.jpg" style="background-size: cover">
 <form action="update.php" method="get">
-    <?php
-    if ($_SERVER['REQUEST_METHOD'] == 'GET')
-        $index = $_GET['id'];
-        $currentData = file_get_contents('data.json');
-        $arr = json_decode($currentData, true);
 
-        $name = $arr[$index]['name'];
-        $phone = $arr[$index]['phone'];
-        $address = $arr[$index]['address'];
-        $group = $arr[$index]['group'];
-        $role = $arr[$index]['role'];
-
-    ?>
 
     <center>
         <table>

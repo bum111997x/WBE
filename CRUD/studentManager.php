@@ -72,7 +72,9 @@ class StudentManager
         $students = $this->getListStudent();
         if(array_key_exists($index,$students)){
             $students[$index] = $student;
+
         }
+        return $students;
     }
 }
 
