@@ -70,7 +70,7 @@ $list = $studentList->getListStudent();
 <br>
 <table id="customers">
     <tr>
-        <td style="text-align: center" colspan="7"><h2>Danh sach sinh vien</h2></td>
+        <td style="text-align: center" colspan="8"><h2>Danh sach sinh vien</h2></td>
     </tr>
     <tr>
         <td>STT</td>
@@ -79,6 +79,7 @@ $list = $studentList->getListStudent();
         <td>Address</td>
         <td>Role</td>
         <td>Group</td>
+        <td></td>
         <td></td>
     </tr>
     <?php
