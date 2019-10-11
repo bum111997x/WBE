@@ -1,21 +1,17 @@
 <?php
-
-
 class Node
 {
+    /* Node data */
     public $data;
+    /* Link to next node */
     public $next;
-
-    public function __construct($data)
+    function __construct($data)
     {
         $this->data = $data;
-        $this->next = null;
+        $this->next = NULL;
     }
-
-    public function readNode()
+    function readNode()
     {
         return $this->data;
     }
-
-
 }
